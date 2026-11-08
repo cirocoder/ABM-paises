@@ -1,0 +1,194 @@
+:root {
+  font-family: sans-serif;
+  color: #1b3953;
+  background: #f1f5f8;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  width: min(880px, calc(100% - 2rem));
+  margin: 3rem auto;
+}
+header {
+  background: #1b3953;
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+}
+header p:last-child {
+  margin-bottom: 0;
+  color: #d8e4ed;
+}
+h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.8rem, 5vw, 2.65rem);
+}
+h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.muted,
+small {
+  color: #526b82;
+}
+.muted {
+  margin: 0.25rem 0 0;
+}
+small {
+  display: block;
+}
+.dialog-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  border: 1px solid #b7c8d6;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  color: inherit;
+  background: white;
+  font-weight: 650;
+  cursor: pointer;
+}
+button:hover {
+  background: #e8f0f6;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #3c719b;
+  outline-offset: 2px;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.primary {
+  background: #1b3953;
+  color: white;
+  border-color: #1b3953;
+}
+.primary:hover {
+  background: #132d43;
+}
+.danger {
+  color: white;
+  background: #9b2929;
+  border-color: #9b2929;
+}
+.danger:hover {
+  background: #7d2020;
+}
+.danger-text,
+.error {
+  color: #932a2a;
+}
+.panel {
+  margin-top: 1.25rem;
+  background: white;
+  border: 1px solid #d6e1ea;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.section-heading .eyebrow {
+  color: #1b3953;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+th,
+td {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #d6e1ea;
+  overflow-wrap: anywhere;
+}
+th {
+  background: #eaf1f6;
+}
+th:last-child {
+  width: 15rem;
+}
+.row-actions button {
+  margin: 0.15rem 0.35rem 0.15rem 0;
+}
+.empty {
+  border: 1px dashed #b7c8d6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+.status:empty {
+  margin: 0;
+}
+.status {
+  color: #1b3953;
+  margin-bottom: 0;
+}
+dialog {
+  width: min(520px, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  border: 1px solid #d6e1ea;
+  border-radius: 14px;
+  padding: 1.5rem;
+  color: inherit;
+}
+dialog::backdrop {
+  background: #122638aa;
+}
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.wide {
+  grid-column: 1 / -1;
+}
+label {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 0.2rem;
+}
+input {
+  width: 100%;
+  border: 1px solid #a9bac8;
+  border-radius: 7px;
+  padding: 0.45rem 0.6rem;
+}
+.dialog-actions {
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+@media (max-width: 540px) {
+  main {
+    margin: 1rem auto;
+  }
+  header,
+  .panel,
+  dialog {
+    padding: 1rem;
+  }
+  th:last-child {
+    width: 7.25rem;
+  }
+}
